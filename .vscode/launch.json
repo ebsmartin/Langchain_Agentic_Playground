@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ice_breaker Runner",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/ice_breaker.py", // Points to icebreaker.py in your project root
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "LANG_CHAIN_TRACING_V2": "false"
+            }
+        }
+        // ... any other configurations
+    ]
+}
