@@ -1,4 +1,4 @@
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
 import os
 
 
@@ -6,7 +6,7 @@ def get_profile_url_tavily(name: str) -> str:
     """
     Looks up a LinkedIn profile by name using Tavily Search.
     """
-    search = TavilySearchResults(tavily_api_key=os.environ.get("TAVILY_API_KEY"))
+    search = TavilySearch(api_key=os.environ.get("TAVILY_API_KEY"))
 
     results = search.run(f"{name}")
 

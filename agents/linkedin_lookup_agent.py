@@ -2,6 +2,9 @@ import os
 import sys
 from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Add the project root directory to the Python path
 # This allows imports from sibling directories like 'tools'
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -23,10 +26,15 @@ def lookup(name: str) -> str:
     """
     Looks up a LinkedIn profile by name.
     """
+    # Debug: Check if API key is loaded (remove this after testing)
+    api_key = os.environ.get("OPENAI_API_KEY")
+    print(f"API Key loaded: {'Yes' if api_key else 'No'}")
+    print(f"First 10 chars: {api_key[:10] if api_key else 'None'}")
+    
     llm = ChatOpenAI(
         model="gpt-4o-mini",
         temperature=0,
-        openai_api_key=os.environ.get("OPENAI_API_KEY"),
+        openai_api_key=api_key,
     )
     template = """ Given the full name {name}, I want you to find the link to their LinkedIn profile page. 
                     Output Expected: Only provide a URL as your output."""

@@ -54,16 +54,21 @@ def scrape_linkedin_profile(
         else:
             raise Exception(f"Failed to fetch mock data: {response.status_code}")
     elif api == "scrapin":
-        # Use Scrapin.io API to fetch LinkedIn profile data
+        # Debug: Check if API key is loaded
+        scrapin_key = os.getenv("SCRAPIN_API_KEY")
+        print(f"Scrapin API Key loaded: {'Yes' if scrapin_key else 'No'}")
+        
+        # Use Scrapin.io API with correct authentication and parameter names
         api_endpoint = "https://api.scrapin.io/enrichment/profile"
-        params = {
-            "url": linkedin_profile_url,
-            "api_key": os.getenv("SCRAPIN_API_KEY"),
-        }
-        response = requests.get(api_endpoint, params=params, timeout=10)
+        
+        # Use X-API-Key header and linkedInUrl parameter (based on test results)
+        headers = {"X-API-Key": scrapin_key}
+        params = {"linkedInUrl": linkedin_profile_url}
+        
+        response = requests.get(api_endpoint, params=params, headers=headers, timeout=10)
         data = response.json()
 
-    elif api == " proxycurl":
+    elif api == "proxycurl":
         api_endpoint = "https://nubela.co/proxycurl/api/v2/linkedin"
         header_dic = {"Authorization": f"Bearer {os.environ.get('PROXYCURL_API_KEY')}"}
         response = requests.get(
@@ -72,22 +77,34 @@ def scrape_linkedin_profile(
             params={"url": linkedin_profile_url},
             timeout=10,
         )
-        # Images returned by proxycurl only have a valid url for an hour.
         data = response.json()
 
-    if (
-        response.status_code != 200
-    ):  # This check might be redundant if mock data fetch raises, but good for non-mock
-        # If data wasn't assigned due to non-200 status in non-mock, response.json() might fail.
-        # It's safer to parse JSON only if status is 200, or handle potential error from .json()
+    if response.status_code != 200:
         error_data = {}
         try:
             error_data = response.json()
         except json.JSONDecodeError:
-            pass  # Keep error_data as {} if JSON parsing fails
+            pass
         raise Exception(
             f"Failed to fetch LinkedIn profile (status {response.status_code}): {error_data.get('error', response.text)}"
         )
+
+    # Print the raw data to see what image fields are available
+    print("=== DEBUG: Raw API Response Keys ===")
+    print(f"Available keys: {list(data.keys()) if isinstance(data, dict) else 'Not a dict'}")
+    
+    # Look for image fields in the person object
+    person_data = data.get('person', {}) if isinstance(data, dict) else {}
+    if person_data:
+        print("=== DEBUG: Person Object Keys ===")
+        print(f"Person keys: {list(person_data.keys())}")
+        
+        # Look for the specific image field names we found
+        print("=== DEBUG: Image Fields Found in Person Data ===")
+        if 'photoUrl' in person_data:
+            print(f"photoUrl: {person_data['photoUrl']}")
+        if 'backgroundUrl' in person_data:
+            print(f"backgroundUrl: {person_data['backgroundUrl']}")
 
     # Recursively remove empty values
     cleaned_data = _recursively_remove_empty_values(data)
