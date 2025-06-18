@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "ice_breaker Runner",
+            "name": "linkedin_parser Runner",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/ice_breaker.py", // Points to icebreaker.py in your project root
+            "program": "${workspaceFolder}/linkedin_parser.py", // Points to icebreaker.py in your project root
             "console": "integratedTerminal",
             "envFile": "${workspaceFolder}/.env",
             "env": {

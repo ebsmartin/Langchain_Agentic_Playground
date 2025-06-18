@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
-from ice_breaker import ice_break_with
+from linkedin_parser import find_linkedin_profile_query
 
 load_dotenv()
 
@@ -20,8 +20,8 @@ def analyze():
         if not name:
             return jsonify({'error': 'Name is required'}), 400
         
-        # Call your ice_break_with function
-        summary, profile_picture_url, banner_url = ice_break_with(name, mock=mock)
+        # Call your find_linkedin_profile_query function
+        summary, profile_picture_url, banner_url = find_linkedin_profile_query(name, mock=mock)
         
         return jsonify({
             'summary': summary.to_dict(),

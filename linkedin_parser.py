@@ -7,15 +7,15 @@ from third_parties.linkedin import scrape_linkedin_profile
 from agents import linkedin_lookup_agent
 from output_parsers import summary_parser, Summary
 
-def ice_break_with(name: str, mock=True) -> tuple [Summary, str, str]:
+def find_linkedin_profile_query(query: str, mock=True) -> tuple [Summary, str, str]:
     """
-    Looks up a LinkedIn profile by name and returns a summary.
+    Looks up a LinkedIn profile based on a search query and returns a summary.
     """
     if mock:
         # Skip lookup when using mock data
         linkedin_url = "https://www.linkedin.com/in/dummy"
     else:
-        linkedin_url = linkedin_lookup_agent.lookup(name=name)
+        linkedin_url = linkedin_lookup_agent.lookup(query=query)
     
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=mock)
     
@@ -61,7 +61,7 @@ def ice_break_with(name: str, mock=True) -> tuple [Summary, str, str]:
     )
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         temperature=0.2,
         google_api_key=os.environ.get("GEMINI_API_KEY"),
     )
@@ -79,7 +79,7 @@ def ice_break_with(name: str, mock=True) -> tuple [Summary, str, str]:
 if __name__ == "__main__":
     load_dotenv()
     print("Ice Breaker Started")
-    ice_break_with("Eric Burton Martin Cognizant", mock=False)
+    find_linkedin_profile_query("Eric Burton Martin Cognizant", mock=False)
     print("Ice Breaker Completed")
 
 
