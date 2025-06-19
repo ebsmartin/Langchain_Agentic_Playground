@@ -13,9 +13,22 @@ class ConversationOutputManager:
     
     def _sanitize_filename(self, name: str) -> str:
         """Convert a person's name into a safe filename."""
-        # Remove special characters and replace spaces with underscores
+        if not name:
+            return "unknown"
+        
+        # Remove special characters that are invalid in filenames
         safe_name = re.sub(r'[<>:"/\\|?*]', '', name)
-        safe_name = safe_name.replace(' ', '_')
+        
+        # Replace multiple whitespace characters (spaces, tabs, etc.) with single underscore
+        safe_name = re.sub(r'\s+', '_', safe_name)
+        
+        # Remove leading and trailing underscores
+        safe_name = safe_name.strip('_')
+        
+        # Ensure we don't have an empty string
+        if not safe_name:
+            return "unknown"
+        
         return safe_name
     
     def _extract_actual_name_from_linkedin_url(self, linkedin_url: str) -> str:
@@ -265,6 +278,103 @@ class ConversationOutputManager:
                 matching.append(analysis)
         
         return matching
+    
+    def _extract_image_urls(self, profile_data: Dict[str, Any]) -> Dict[str, str]:
+        """Extract available image URLs from LinkedIn profile data."""
+        image_data = {
+            'profile_picture_url': None,
+            'banner_url': None,
+            'company_logo_url': None,
+            'company_banner_url': None,
+            'school_logo_url': None,
+            'all_company_logos': [],
+            'primary_company_logo': None
+        }
+        
+        if not profile_data:
+            return image_data
+        
+        print(f"🔍 Extracting image URLs from profile data...")
+        
+        # Extract from person data - try the Scrapin field names
+        person_data = profile_data.get('person', {})
+        if isinstance(person_data, dict):
+            print(f"👤 Person data keys: {list(person_data.keys())}")
+            
+            # Try the confirmed Scrapin field names
+            profile_picture = person_data.get('photoUrl')
+            banner_image = person_data.get('backgroundUrl')
+            
+            if profile_picture:
+                image_data['profile_picture_url'] = profile_picture
+                print(f"✅ Profile picture found: {profile_picture}")
+            else:
+                print(f"❌ No photoUrl field found in person data")
+                
+            if banner_image:
+                image_data['banner_url'] = banner_image
+                print(f"✅ Banner image found: {banner_image}")
+            else:
+                print(f"❌ No backgroundUrl field found in person data")
+            
+            # Get current company logo (first position)
+            positions = person_data.get('positions', {})
+            if isinstance(positions, dict):
+                position_history = positions.get('positionHistory', [])
+                if position_history and len(position_history) > 0:
+                    current_position = position_history[0]
+                    company_logo = current_position.get('companyLogo')
+                    if company_logo:
+                        image_data['primary_company_logo'] = company_logo
+                        image_data['company_logo_url'] = company_logo
+                        print(f"✅ Current company logo: {company_logo}")
+                    
+                    # Collect all company logos
+                    all_logos = []
+                    for position in position_history:
+                        logo = position.get('companyLogo')
+                        if logo and logo not in all_logos:
+                            all_logos.append(logo)
+                    image_data['all_company_logos'] = all_logos
+                    print(f"✅ Found {len(all_logos)} company logos total")
+            
+            # Get school logo
+            schools = person_data.get('schools', {})
+            if isinstance(schools, dict):
+                education_history = schools.get('educationHistory', [])
+                if education_history and len(education_history) > 0:
+                    school_logo = education_history[0].get('schoolLogo')
+                    if school_logo:
+                        image_data['school_logo_url'] = school_logo
+                        print(f"✅ School logo: {school_logo}")
+        
+        # Extract from company data as fallback
+        company_data = profile_data.get('company', {})
+        if isinstance(company_data, dict):
+            company_banner = company_data.get('backgroundUrl')
+            company_logo = company_data.get('logo')
+            
+            if company_banner:
+                image_data['company_banner_url'] = company_banner
+                print(f"✅ Company banner: {company_banner}")
+                
+                # Use company banner as fallback if no personal banner
+                if not image_data['banner_url']:
+                    image_data['banner_url'] = company_banner
+                    print(f"🔄 Using company banner as profile banner fallback")
+            
+            if company_logo and not image_data['company_logo_url']:
+                image_data['company_logo_url'] = company_logo
+                print(f"✅ Company logo from company data: {company_logo}")
+        
+        # Summary
+        print(f"🖼️ Final image extraction results:")
+        print(f"   Profile Picture: {'✅' if image_data['profile_picture_url'] else '❌'}")
+        print(f"   Banner Image: {'✅' if image_data['banner_url'] else '❌'}")
+        print(f"   Company Logo: {'✅' if image_data['company_logo_url'] else '❌'}")
+        print(f"   School Logo: {'✅' if image_data['school_logo_url'] else '❌'}")
+        
+        return image_data
 
 # Global instance
 output_manager = ConversationOutputManager()

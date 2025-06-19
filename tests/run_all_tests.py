@@ -12,6 +12,7 @@ from test_output_parser import test_output_parser
 from test_linkedin_parser import run_linkedin_parser_tests
 from test_linkedin_lookup_agent import run_linkedin_lookup_tests
 from utils.output_manager import output_manager
+from test_output_manager import test_output_manager
 
 class TeeOutput:
     """Captures output to both console and a string buffer"""
@@ -93,26 +94,32 @@ def run_all_tests(include_api_tests: bool = False):
         
         results = []
         
-        # Test 1: Output Parser (no API calls)
-        print("\n1️⃣ TESTING OUTPUT PARSER")
+        # Test 1: Output Manager (comprehensive)
+        print("\n1️⃣ TESTING OUTPUT MANAGER (COMPREHENSIVE)")
+        print("-" * 40)
+        output_manager_result = test_output_manager()
+        results.append(output_manager_result if output_manager_result is not None else False)
+        
+        # Test 2: Output Parser (Pydantic integration) - rename existing test
+        print("\n\n2️⃣ TESTING OUTPUT PARSER (PYDANTIC INTEGRATION)")
         print("-" * 40)
         output_result = test_output_parser()
         results.append(output_result if output_result is not None else False)
         
-        # Test 2: Ice Breaker (mock mode only by default)
-        print("\n\n2️⃣ TESTING ICE BREAKER")
+        # Test 3: Ice Breaker (mock mode only by default)
+        print("\n\n3️⃣ TESTING ICE BREAKER")
         print("-" * 40)
         ice_result = run_linkedin_parser_tests(include_real_api=include_api_tests)
         results.append(ice_result if ice_result is not None else False)
         
-        # Test 3: LinkedIn Lookup Agent (basic tests)
-        print("\n\n3️⃣ TESTING LINKEDIN LOOKUP AGENT")
+        # Test 4: LinkedIn Lookup Agent (basic tests)
+        print("\n\n4️⃣ TESTING LINKEDIN LOOKUP AGENT")
         print("-" * 40)
         linkedin_result = run_linkedin_lookup_tests(skip_api_tests=not include_api_tests)
         results.append(linkedin_result if linkedin_result is not None else False)
         
-        # Test 4: Conversation Parser (all tests)
-        print("\n\n4️⃣ TESTING CONVERSATION PARSER")
+        # Test 5: Conversation Parser (all tests)
+        print("\n\n5️⃣ TESTING CONVERSATION PARSER")
         print("-" * 40)
         conversation_result = run_conversation_tests()
         results.append(conversation_result if conversation_result is not None else False)
