@@ -6,12 +6,15 @@ from agents import linkedin_lookup_agent
 from agents.conversation_analysis_agent import analyze_input_for_linkedin
 from linkedin_parser import find_linkedin_profile_query
 from datetime import datetime, timedelta
+from utils.output_manager import output_manager
+from third_parties.linkedin import scrape_linkedin_profile
 
 def analyze_conversation_and_find_linkedin_profiles(
     input_data: str, 
     user_identity: dict = None, 
     is_file_path: bool = False,
-    conversation_date: str = None
+    conversation_date: str = None,
+    save_results: bool = True  # New parameter to control saving
 ):
     """
     Analyzes a conversation and attempts to find LinkedIn profiles for people mentioned,
@@ -24,7 +27,17 @@ def analyze_conversation_and_find_linkedin_profiles(
     
     print("=== STEP 1: ANALYZING CONVERSATION ===")
     
+    # Store original conversation for saving
+    original_conversation = input_data
+    
     if is_file_path:
+        # Read the actual file content for saving
+        if input_data.endswith('.txt'):
+            with open(input_data, 'r', encoding='utf-8') as f:
+                original_conversation = f.read()
+        else:
+            original_conversation = f"File: {input_data} (processed via Gemini)"
+        
         # Use the conversation analysis agent for file processing
         analysis_result = analyze_input_for_linkedin(input_data, is_file_path=True, user_identity=user_identity)
         
@@ -90,18 +103,49 @@ def analyze_conversation_and_find_linkedin_profiles(
     for query in filtered_queries:
         print(f"- {query}")
     
-    # Step 2: LinkedIn lookup
+    # Step 2: LinkedIn lookup with enhanced data collection
     print("\n=== STEP 2: LINKEDIN LOOKUP ===")
     
     linkedin_profiles = []
+    saved_files = []
+    
     for query in filtered_queries:
         print(f"\n🔍 Searching for: {query}")
         try:
             linkedin_url = linkedin_lookup_agent.lookup(query)
-            linkedin_profiles.append({
+            
+            # Get full profile data if LinkedIn URL found
+            profile_data = None
+            if linkedin_url and "linkedin.com/in/" in linkedin_url and "Could not find" not in linkedin_url:
+                try:
+                    print(f"📊 Scraping full profile data...")
+                    profile_data = scrape_linkedin_profile(linkedin_url, mock=False)
+                except Exception as e:
+                    print(f"⚠️ Could not scrape full profile: {e}")
+            
+            profile_info = {
                 'search_query': query,
-                'linkedin_url': linkedin_url
-            })
+                'linkedin_url': linkedin_url,
+                'profile_data': profile_data
+            }
+            linkedin_profiles.append(profile_info)
+            
+            # Save results if enabled and LinkedIn profile found
+            if save_results and linkedin_url and "linkedin.com/in/" in linkedin_url:
+                try:
+                    filename = output_manager.save_conversation_analysis(
+                        search_query=query,
+                        linkedin_url=linkedin_url,
+                        profile_data=profile_data,
+                        conversation_analysis=detailed_analysis,
+                        original_conversation=original_conversation,
+                        conversation_date=conversation_date,
+                        user_identity=user_identity
+                    )
+                    saved_files.append(filename)
+                except Exception as e:
+                    print(f"⚠️ Failed to save results for {query}: {e}")
+            
             print(f"✅ Found: {linkedin_url}")
             
         except Exception as e:
@@ -109,15 +153,25 @@ def analyze_conversation_and_find_linkedin_profiles(
             linkedin_profiles.append({
                 'search_query': query,
                 'linkedin_url': None,
+                'profile_data': None,
                 'error': str(e)
             })
     
-    return {
+    result = {
         'detailed_analysis': detailed_analysis,
         'search_queries': filtered_queries,
         'linkedin_profiles': linkedin_profiles,
         'user_excluded': user_identity['name'] if user_identity else None
     }
+    
+    if save_results and saved_files:
+        result['saved_files'] = saved_files
+        print(f"\n💾 SAVED RESULTS")
+        print("=" * 30)
+        for filename in saved_files:
+            print(f"📁 {filename}")
+    
+    return result
 
 def get_detailed_conversation_analysis(
     conversation: str = None, 
@@ -276,9 +330,57 @@ def extract_action_items(analysis_text: str) -> list[str]:
     
     return action_items
 
+def view_saved_analyses():
+    """View all saved conversation analyses."""
+    print("📋 SAVED CONVERSATION ANALYSES")
+    print("=" * 50)
+    
+    analyses = output_manager.list_saved_analyses()
+    
+    if not analyses:
+        print("No saved analyses found.")
+        return
+    
+    for i, analysis in enumerate(analyses, 1):
+        print(f"\n{i}. {analysis.get('person_name', 'Unknown')}")
+        print(f"   🔍 Search: {analysis.get('search_used', 'N/A')}")
+        print(f"   🏢 Company: {analysis.get('company', 'Not specified')}")
+        print(f"   💼 Job: {analysis.get('job_title', 'Not specified')}")
+        print(f"   🔗 LinkedIn: {'✅' if analysis.get('linkedin_found') else '❌'}")
+        print(f"   📅 Date: {analysis.get('file_date', '')[:10]}")
+        print(f"   📁 File: {analysis.get('filename', '')}")
+
+def search_saved_analyses(search_term: str):
+    """Search saved analyses by name, company, or job title."""
+    print(f"🔍 SEARCHING FOR: '{search_term}'")
+    print("=" * 50)
+    
+    matching = output_manager.search_saved_analyses(search_term)
+    
+    if not matching:
+        print(f"No analyses found matching '{search_term}'")
+        return
+    
+    for i, analysis in enumerate(matching, 1):
+        print(f"\n{i}. {analysis.get('person_name', 'Unknown')}")
+        print(f"   🔍 Search: {analysis.get('search_used', 'N/A')}")
+        print(f"   🏢 Company: {analysis.get('company', 'Not specified')}")
+        print(f"   💼 Job: {analysis.get('job_title', 'Not specified')}")
+        print(f"   📁 File: {analysis.get('filename', '')}")
+
 if __name__ == "__main__":
     print("⚠️  Tests have been moved to the 'tests' folder!")
-    print("Run tests with:")
+    print("\nAdditional commands:")
+    print("  python conversation_parser.py --view         # View saved analyses")
+    print("  python conversation_parser.py --search <term> # Search saved analyses")
+    print("\nRun tests with:")
     print("  python tests/run_all_tests.py")
     print("  python tests/test_conversation_parser.py 3")
-    print("  python tests/test_output_parser.py")
+    
+    import sys
+    if len(sys.argv) > 1:
+        if sys.argv[1] == '--view':
+            view_saved_analyses()
+        elif sys.argv[1] == '--search' and len(sys.argv) > 2:
+            search_term = ' '.join(sys.argv[2:])
+            search_saved_analyses(search_term)

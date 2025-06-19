@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "actual_name": "Indrakshi Ray",
+    "search_query": "Indrakshi Ray\" \"Professor of Cybersecurity\" \"Colorado State University",
+    "conversation_date": "2025-06-18",
+    "analysis_timestamp": "2025-06-18T17:14:46.407551",
+    "user_identity": {
+      "name": "Eric Burton Martin",
+      "title": "Healthcare Data Analyst",
+      "company": "Cognizant",
+      "school": "Colorado State University",
+      "linkedin_url": "https://www.linkedin.com/in/ebsmartin/"
+    }
+  },
+  "linkedin_profile": {
+    "url": "https://www.linkedin.com/in/indrakshi-ray-2aab578",
+    "profile_data": {
+      "success": true,
+      "credits_left": 90,
+      "rate_limit_left": 97,
+      "person": {
+        "publicIdentifier": "indrakshi-ray-2aab578",
+        "linkedInIdentifier": "ACoAAAGYCeIB5gaCd0Hlt2fm13ADxBe7_paWe0Q",
+        "memberIdentifier": "26741218",
+        "linkedInUrl": "https://www.linkedin.com/in/indrakshi-ray-2aab578",
+        "firstName": "Indrakshi",
+        "lastName": "Ray",
+        "headline": "Director, Colorado Center for Cybersecurity;\nSite Director NSF IUCRC Center for Cybersecurity Analytics and Automation",
+        "location": "Fort Collins, Colorado, United States of America",
+        "summary": "Professor working in the general area of cybersecurity. Research include data and applications security, software security, network and operating systems security, and cyber physical systems security.",
+        "photoUrl": "https://media.licdn.com/dms/image/v2/D5603AQHmQ5PaleiXqg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719042959791?e=1755734400&v=beta&t=wSBAU1tnLjmGHKKQvxmdqFwW6aUFvVEeTJM-25R39Sk",
+        "openToWork": false,
+        "premium": false,
+        "showVerificationBadge": true,
+        "creationDate": {
+          "month": 6,
+          "year": 2008
+        },
+        "followerCount": 930,
+        "positions": {
+          "positionsCount": 6,
+          "positionHistory": [
+            {
+              "title": "Professor",
+              "companyName": "Colorado State University",
+              "companyLocation": "Fort Collins, Colorado, United States",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 7,
+                  "year": 2014
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            },
+            {
+              "title": "Associate Professor",
+              "companyName": "Colorado State University",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 7,
+                  "year": 2006
+                },
+                "end": {
+                  "month": 6,
+                  "year": 2014
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            },
+            {
+              "title": "Assistant Professor",
+              "companyName": "Colorado State University",
+              "companyLocation": "Fort Collins, Colorado, United States",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 8,
+                  "year": 2001
+                },
+                "end": {
+                  "month": 6,
+                  "year": 2006
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            },
+            {
+              "title": "Director",
+              "companyName": "Colorado Center for Cybersecurity",
+              "companyLocation": "Colorado, USA",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 9,
+                  "year": 2018
+                }
+              },
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=Colorado+Center+for+Cybersecurity"
+            },
+            {
+              "title": "Site Director",
+              "companyName": "NSF IUCRC Center for Cybersecurity Analytics and Automation",
+              "companyLocation": "Fort Collins, Colorado",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 2,
+                  "year": 2017
+                }
+              },
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=NSF+IUCRC+Center+for+Cybersecurity+Analytics+and+Automation"
+            },
+            {
+              "title": "Assistant Professor",
+              "companyName": "University of Michigan-Dearborn",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 8,
+                  "year": 1997
+                },
+                "end": {
+                  "month": 7,
+                  "year": 2001
+                }
+              },
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=University+of+Michigan-Dearborn"
+            }
+          ]
+        },
+        "schools": {
+          "educationsCount": 5,
+          "educationHistory": [
+            {
+              "degreeName": "Ph.D.",
+              "fieldOfStudy": "Information Technology",
+              "linkedInUrl": "https://www.linkedin.com/company/5489/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQHu5OKxS7J5tA/company-logo_400_400/company-logo_400_400/0/1714017610072/george_mason_university_logo?e=1755734400&v=beta&t=ceMZJp8sFnKSGWrouCAHffDHx-Wakr2x3jrkykMhF_0",
+              "schoolName": "George Mason University",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 1993
+                },
+                "end": {
+                  "month": 1,
+                  "year": 1997
+                }
+              }
+            },
+            {
+              "degreeName": "M.E.",
+              "fieldOfStudy": "Computer Science and Engineering",
+              "linkedInUrl": "https://www.linkedin.com/company/979527/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/C510BAQFkGVsBobrK1A/company-logo_400_400/company-logo_400_400/0/1630609676569/jadavpur_university_logo?e=1755734400&v=beta&t=dsTuU6qVzu-3zDRskEmLHuvI4xbX9IiDwft07SWUAlY",
+              "schoolName": "Jadavpur University",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 1989
+                },
+                "end": {
+                  "month": 1,
+                  "year": 1991
+                }
+              }
+            },
+            {
+              "degreeName": "B.E.",
+              "fieldOfStudy": "Computer Science and Technology",
+              "linkedInUrl": "https://www.linkedin.com/company/15093684/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/C510BAQHP8RbmRZx9ow/company-logo_400_400/company-logo_400_400/0/1630618227904?e=1755734400&v=beta&t=sDNzfpu9j2Fa1rHp2AfvLn4ISwwOviMN0B0keVi9T14",
+              "schoolName": "IIEST, Shibpur",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 1984
+                },
+                "end": {
+                  "month": 1,
+                  "year": 1988
+                }
+              }
+            },
+            {
+              "degreeName": "Science",
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=Loreto+House",
+              "schoolName": "Loreto House",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 1982
+                },
+                "end": {
+                  "month": 1,
+                  "year": 1984
+                }
+              }
+            },
+            {
+              "degreeName": "I.C.S.E.",
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=St%2E+Teresa%27s+Secondary+School",
+              "schoolName": "St. Teresa's Secondary School",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 1971
+                },
+                "end": {
+                  "month": 1,
+                  "year": 1982
+                }
+              }
+            }
+          ]
+        },
+        "skills": [
+          "Algorithms",
+          "Java",
+          "C",
+          "C++",
+          "Software Engineering",
+          "Higher Education",
+          "Computer Science",
+          "Distributed Systems",
+          "LaTeX",
+          "Programming",
+          "University Teaching",
+          "Computer Security",
+          "SQL",
+          "Linux",
+          "Matlab",
+          "Python",
+          "Data Mining",
+          "Mentoring and motivating students in research pertaining to cybersecurity and information assurance."
+        ],
+        "recommendations": {
+          "recommendationsCount": 0
+        },
+        "certifications": {
+          "certificationsCount": 0
+        },
+        "testScores": {
+          "testScoresCount": 0
+        },
+        "volunteeringExperiences": {
+          "volunteeringExperiencesCount": 0
+        },
+        "interests": {
+          "companies": [
+            {
+              "linkedinIdentifier": "5489",
+              "name": "George Mason University",
+              "url": "https://www.linkedin.com/school/george-mason-university/",
+              "slug": "george-mason-university",
+              "followerCount": 272330
+            },
+            {
+              "linkedinIdentifier": "163149",
+              "name": "Colorado State University",
+              "url": "https://www.linkedin.com/school/colorado-state-university/",
+              "slug": "colorado-state-university",
+              "followerCount": 321309
+            }
+          ]
+        }
+      },
+      "company": {
+        "linkedInId": "163149",
+        "name": "Colorado State University",
+        "universalName": "colorado-state-university",
+        "linkedInUrl": "https://www.linkedin.com/company/163149",
+        "employeeCount": 16780,
+        "followerCount": 321309,
+        "employeeCountRange": {
+          "start": 5001,
+          "end": 10000
+        },
+        "websiteUrl": "http://colostate.edu",
+        "tagline": "At Colorado State, there’s this energy we all share—this undeniable\nexcitement for what’s next. ",
+        "description": "\n\nAt Colorado State, there’s this energy we all share—this undeniable excitement for what’s next. And it’s a feeling you can only find here.\n\nAs you choose a college, one of the biggest questions most students have is what to study. At Colorado State, we offer over 250 programs, over 50 minors, and several advising tracks. That means you’ll have the ability to reach your goals — no matter what they are.\n\nFounded in 1870 as the Colorado Agricultural College, Colorado State University is now among the nation's leading research universities. Our world-class research in infectious disease, atmospheric science, clean energy technologies, environmental science, and biomedical technology attracted more than $300 million in research funding annually. Our professional programs in veterinary medicine, occupational therapy, journalism, agriculture and construction management are ranked among the nation's best.\n\nColorado State is the \"university of choice\"​ for Colorado residents; 30% of all of Colorado's science, math, engineering and technology majors pursue degrees at CSU.\n\nThis is LinkedIn account is officially recognized by Colorado State University; however, the views and opinions expressed on this page are not necessarily those of the University. CSU retains discretion to allow or disallow comments and/or posts on this page. For more information about CSU’s Social Media Policy, visit http://www.socialmedia.colostate.edu. \n",
+        "industry": "Higher Education",
+        "specialities": [
+          "clean and renewable energy",
+          "sustainable technology",
+          "cancer research",
+          "infectious disease",
+          "veterinarian medicine",
+          "climate modeling",
+          "atmospheric science",
+          "agriculture",
+          "construction management",
+          "journalism",
+          "occupational therapy"
+        ],
+        "headquarter": {
+          "city": "Fort Collins",
+          "country": "US",
+          "postalCode": "80523-0100",
+          "geographicArea": "co",
+          "street1": "102 Administration Building"
+        },
+        "logo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+        "backgroundUrl": "https://media.licdn.com/dms/image/v2/D4D1BAQEOFE6ee7hO6w/company-background_10000/company-background_10000/0/1695230954736/colorado_state_university_cover?e=1750899600&v=beta&t=BpR7JIeLksGErV5vyTyg6QecbeozH1NtVtnuYJvuYqw"
+      }
+    },
+    "data_source": "scrapin"
+  },
+  "conversation": {
+    "original_text": "File: test_files/conversation.docx (processed via Gemini)",
+    "analysis": {
+      "analysis": "## Person Mapping:\n- Person A: Not specified\n\n## People Identified (Excluding Eric Burton Martin):\n**Indrakshi Ray:**\n- Job Title/Role: Professor of cybersecurity, Director of the Colorado Center for Cybersecurity\n- Company/Industry: Colorado State University\n- Other Details: SEARCH: \"Indrakshi Ray\" \"Professor of Cybersecurity\" \"Colorado State University\"\n\n## Conversation Summary:\nPerson 1 provided information about Indrakshi Ray, including her name, professional roles (Professor of Cybersecurity, Director of the Colorado Center for Cybersecurity), and affiliation with Colorado State University. Person 1 also specified a search query related to Indrakshi Ray.\n\n## Key Points Discussed:\n- Details about Indrakshi Ray (name, job titles, university).\n- A specific search query for Indrakshi Ray.\n\n## Action Items for Eric Burton Martin:\n- Perform a search using the terms: \"Indrakshi Ray\", \"Professor of Cybersecurity\", \"Colorado State University\".",
+      "person_mapping": {
+        "Person A": "Not specified"
+      },
+      "action_items": [
+        "Perform a search using the terms: \"Indrakshi Ray\", \"Professor of Cybersecurity\", \"Colorado State University\"."
+      ]
+    }
+  },
+  "summary": {
+    "person_name": "Indrakshi Ray",
+    "search_used": "Indrakshi Ray\" \"Professor of Cybersecurity\" \"Colorado State University",
+    "linkedin_found": true,
+    "linkedin_url": "https://www.linkedin.com/in/indrakshi-ray-2aab578",
+    "job_title": "Professor of cybersecurity, Director of the Colorado Center for Cybersecurity",
+    "company": "Colorado State University",
+    "person_mapping": {
+      "Person A": "Not specified"
+    },
+    "action_items_count": 1
+  }
+}

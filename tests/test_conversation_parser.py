@@ -14,6 +14,9 @@ def run_conversation_tests(test_number: int = None):
     Args:
         test_number (int, optional): Specific test number to run (1-6). 
                                    If None, runs all tests.
+    
+    Returns:
+        bool: True if all tests passed, False if any failed
     """
     load_dotenv()
     
@@ -53,22 +56,40 @@ Person A: Perfect. Just scanned it. I'll send you a message. Looking forward to 
     
     print("="*60)
     
+    # Track test results
+    test_results = []
+    
     # Test 1: Direct Text Input
     if test_number is None or test_number == 1:
         print("\n🧪 TEST 1: DIRECT TEXT INPUT")
         print("-" * 40)
         
-        result1 = analyze_conversation_and_find_linkedin_profiles(
-            input_data=conversation_text,
-            user_identity=user_identity,
-            is_file_path=False,
-            conversation_date='2024-06-18'
-        )
-        
-        print(f"\n✅ Test 1 Results:")
-        print(f"   - User excluded: {result1['user_excluded']}")
-        print(f"   - Search queries found: {len(result1['search_queries'])}")
-        print(f"   - LinkedIn profiles found: {sum(1 for p in result1['linkedin_profiles'] if p.get('linkedin_url') and 'Could not find' not in p['linkedin_url'])}")
+        try:
+            result1 = analyze_conversation_and_find_linkedin_profiles(
+                input_data=conversation_text,
+                user_identity=user_identity,
+                is_file_path=False,
+                conversation_date='2024-06-18'
+            )
+            
+            # Check if test was successful
+            test1_success = (
+                result1 and 
+                isinstance(result1, dict) and
+                'search_queries' in result1 and
+                len(result1['search_queries']) > 0
+            )
+            test_results.append(test1_success)
+            
+            print(f"\n✅ Test 1 Results:")
+            print(f"   - User excluded: {result1['user_excluded']}")
+            print(f"   - Search queries found: {len(result1['search_queries'])}")
+            print(f"   - LinkedIn profiles found: {sum(1 for p in result1['linkedin_profiles'] if p.get('linkedin_url') and 'Could not find' not in p['linkedin_url'])}")
+            print(f"   - Status: {'PASS' if test1_success else 'FAIL'}")
+            
+        except Exception as e:
+            print(f"❌ Test 1 Failed: {e}")
+            test_results.append(False)
     
     # Test 2: Text File Input
     if test_number is None or test_number == 2:
@@ -100,13 +121,24 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
                 conversation_date='2024-06-18'
             )
             
+            # Check if test was successful
+            test2_success = (
+                result2 and 
+                isinstance(result2, dict) and
+                'search_queries' in result2 and
+                len(result2['search_queries']) > 0
+            )
+            test_results.append(test2_success)
+            
             print(f"\n✅ Test 2 Results:")
             print(f"   - User excluded: {result2['user_excluded']}")
             print(f"   - Search queries found: {len(result2['search_queries'])}")
             print(f"   - LinkedIn profiles found: {sum(1 for p in result2['linkedin_profiles'] if p.get('linkedin_url') and 'Could not find' not in p['linkedin_url'])}")
+            print(f"   - Status: {'PASS' if test2_success else 'FAIL'}")
             
         except Exception as e:
             print(f"❌ Test 2 Failed: {e}")
+            test_results.append(False)
     
     # Test 3: Audio File Input
     if test_number is None or test_number == 3:
@@ -123,16 +155,26 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
                     conversation_date='2024-06-18'
                 )
                 
+                test3_success = (
+                    result3 and 
+                    isinstance(result3, dict) and
+                    'search_queries' in result3
+                )
+                test_results.append(test3_success)
+                
                 print(f"\n✅ Test 3 Results:")
                 print(f"   - User excluded: {result3['user_excluded']}")
                 print(f"   - Search queries found: {len(result3['search_queries'])}")
                 print(f"   - LinkedIn profiles found: {sum(1 for p in result3['linkedin_profiles'] if p['linkedin_url'])}")
+                print(f"   - Status: {'PASS' if test3_success else 'FAIL'}")
                 
             except Exception as e:
                 print(f"❌ Test 3 Failed: {e}")
+                test_results.append(False)
         else:
             print("⏭️ Test 3 Skipped: No audio file found at test_files/conversation.mp3")
             print("   To test audio: Add an MP3 file with conversation to test_files/conversation.mp3")
+            test_results.append(True)  # Skip counts as pass
     
     # Test 4: Image File Input
     if test_number is None or test_number == 4:
@@ -149,16 +191,26 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
                     conversation_date='2024-06-18'
                 )
                 
+                test4_success = (
+                    result4 and 
+                    isinstance(result4, dict) and
+                    'search_queries' in result4
+                )
+                test_results.append(test4_success)
+                
                 print(f"\n✅ Test 4 Results:")
                 print(f"   - User excluded: {result4['user_excluded']}")
                 print(f"   - Search queries found: {len(result4['search_queries'])}")
                 print(f"   - LinkedIn profiles found: {sum(1 for p in result4['linkedin_profiles'] if p['linkedin_url'])}")
+                print(f"   - Status: {'PASS' if test4_success else 'FAIL'}")
                 
             except Exception as e:
                 print(f"❌ Test 4 Failed: {e}")
+                test_results.append(False)
         else:
             print("⏭️ Test 4 Skipped: No image file found at test_files/business_card.png")
             print("   To test image: Add a PNG/JPG file with conversation text to test_files/")
+            test_results.append(True)  # Skip counts as pass
     
     # Test 5: PDF File Input  
     if test_number is None or test_number == 5:
@@ -175,16 +227,26 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
                     conversation_date='2024-06-18'
                 )
                 
+                test5_success = (
+                    result5 and 
+                    isinstance(result5, dict) and
+                    'search_queries' in result5
+                )
+                test_results.append(test5_success)
+                
                 print(f"\n✅ Test 5 Results:")
                 print(f"   - User excluded: {result5['user_excluded']}")
                 print(f"   - Search queries found: {len(result5['search_queries'])}")
                 print(f"   - LinkedIn profiles found: {sum(1 for p in result5['linkedin_profiles'] if p['linkedin_url'])}")
+                print(f"   - Status: {'PASS' if test5_success else 'FAIL'}")
                 
             except Exception as e:
                 print(f"❌ Test 5 Failed: {e}")
+                test_results.append(False)
         else:
             print("⏭️ Test 5 Skipped: No PDF file found at test_files/conversation.pdf")
             print("   To test PDF: Add a PDF file with conversation text to test_files/")
+            test_results.append(True)  # Skip counts as pass
     
     # Test 6: Word Document Input
     if test_number is None or test_number == 6:
@@ -235,11 +297,20 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
                 conversation_date='2025-06-18'
             )
             
+            test6_success = (
+                result6 and 
+                isinstance(result6, dict) and
+                'search_queries' in result6 and
+                len(result6['search_queries']) > 0
+            )
+            test_results.append(test6_success)
+            
             print(f"\n✅ Test 6 Results:")
             print(f"   - User excluded: {result6['user_excluded']}")
             print(f"   - Search queries found: {len(result6['search_queries'])}")
             print(f"   - LinkedIn profiles found: {sum(1 for p in result6['linkedin_profiles'] if p['linkedin_url'])}")
             print(f"   - Tool used: extract_text_from_word (via agent)")
+            print(f"   - Status: {'PASS' if test6_success else 'FAIL'}")
             
             # Show what queries were generated
             if result6['search_queries']:
@@ -250,14 +321,25 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
         except ImportError:
             print("❌ Test 6 Failed: python-docx not installed")
             print("   Install with: pip install python-docx")
+            test_results.append(False)
         except Exception as e:
             print(f"❌ Test 6 Failed: {e}")
+            test_results.append(False)
+    
+    # Calculate overall success
+    if test_results:
+        passed_tests = sum(test_results)
+        total_tests = len(test_results)
+        overall_success = passed_tests == total_tests
+    else:
+        overall_success = False
     
     # Only show summary if running all tests
     if test_number is None:
         print("\n" + "="*60)
         print("TESTING COMPLETED")
         print("="*60)
+        print(f"📊 OVERALL RESULTS: {passed_tests}/{total_tests} tests passed")
         
         # Summary of what each test demonstrates
         print("\n📋 TEST SUMMARY:")
@@ -268,8 +350,12 @@ Person A: I've been there for 1 year, mainly working on improving revenue optimi
         print("   Test 5: .pdf file → Gemini native PDF processing")
         print("   Test 6: .docx file → Agent + extract_text_from_word tool")
         print("\n🎯 Only Test 6 uses our custom tool and agent!")
+        
+        return overall_success
     else:
         print(f"\n✅ Test {test_number} completed!")
+        return test_results[-1] if test_results else False
+        
 
 if __name__ == "__main__":
     import sys

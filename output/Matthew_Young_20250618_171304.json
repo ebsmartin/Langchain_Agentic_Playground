@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "actual_name": "Matthew Young",
+    "search_query": "Matt Software Engineer Nickel5",
+    "conversation_date": "2024-06-18",
+    "analysis_timestamp": "2025-06-18T17:13:04.437805",
+    "user_identity": {
+      "name": "Eric Burton Martin",
+      "title": "Healthcare Data Analyst",
+      "company": "Cognizant",
+      "school": "Colorado State University",
+      "linkedin_url": "https://www.linkedin.com/in/ebsmartin/"
+    }
+  },
+  "linkedin_profile": {
+    "url": "https://www.linkedin.com/in/matt-young-csu",
+    "profile_data": {
+      "success": true,
+      "credits_left": 92,
+      "rate_limit_left": 99,
+      "person": {
+        "publicIdentifier": "matt-young-csu",
+        "linkedInIdentifier": "ACoAACh9ePABcOVq6kKvcbVPLoqBNSDqB73XsDU",
+        "memberIdentifier": "679311600",
+        "linkedInUrl": "https://www.linkedin.com/in/matt-young-csu",
+        "firstName": "Matthew",
+        "lastName": "Young",
+        "headline": "Full Stack Software Developer",
+        "location": "Fort Collins, Colorado, United States of America",
+        "summary": "Software Engineer with over 4 years of experience building innovative, data-centric web applications. Expertise in an agile environment, delivering targeted software solutions to big data problems, while effectively collaborating across cross functional teams. Proficient in Java, C++, Python, TypeScript, React, and SQL, with a strong background in cloud native applications and machine learning integration. Master's degree in computer science with a focus on distributed systems & big data.",
+        "photoUrl": "https://media.licdn.com/dms/image/v2/D5603AQGEXcS8ma5iBA/profile-displayphoto-shrink_100_100/B56ZYbBLs.H0AU-/0/1744210017364?e=1755734400&v=beta&t=UO4MBl9jszFQZgzW1P4BUxdP9uFrhvLmV01v7CiP8Ww",
+        "backgroundUrl": "https://media.licdn.com/dms/image/v2/D4E16AQFP78GnmL9s5Q/profile-displaybackgroundimage-shrink_200_800/B4EZYbeiCBHcAc-/0/1744217713002?e=1755734400&v=beta&t=XGd87fBQyT_WUc4FaxPAyXyKrc-uPIudFaooP5NrDyU",
+        "openToWork": false,
+        "premium": false,
+        "pronoun": "HE_HIM",
+        "showVerificationBadge": true,
+        "creationDate": {
+          "month": 9,
+          "year": 2018
+        },
+        "followerCount": 94,
+        "positions": {
+          "positionsCount": 8,
+          "positionHistory": [
+            {
+              "title": "Software Engineer",
+              "companyName": "Nickel5, Inc.",
+              "companyLocation": "Boulder, Colorado, United States · Hybrid",
+              "description": "- Increased company revenue by ~25% by building an online home buying and valuation platform\n- Delivered performance and system benchmark data to users by building 3 web applications using Typescript and React\n- Expanded company user base by designing and deploying 2 distributed systems in Python allowing users to interact with core company software\n- Added value to company data products by developing machine learning models",
+              "startEndDate": {
+                "start": {
+                  "month": 5,
+                  "year": 2024
+                }
+              },
+              "contractType": "Full-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQF5OjkuigU9jw/company-logo_400_400/company-logo_400_400/0/1729789238533/nickel5inc_logo?e=1755734400&v=beta&t=Do_IaemXdwNYcRyfQQDzSYodUYOf03x3JuDR0JG49zQ",
+              "linkedInUrl": "https://www.linkedin.com/company/102707905/",
+              "linkedInId": "102707905"
+            },
+            {
+              "title": "Full Stack Software Developer",
+              "companyName": "Project Sustain",
+              "companyLocation": "Hybrid",
+              "description": "- Published and presented research on novel low latency, high throughput data analysis systems at 3 international computer science conferences\n- Improved team efficiencies and project outcomes by leading development for agile software engineering teams\n- Decreased company's private cloud overhead by delivering 2 cloud native software products using AWS to provide serverless access to microservices\n- Provided real-time access to state-of-the-art high resolution soil moisture predictions by integrating machine learning models into back-end systems",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2021
+                },
+                "end": {
+                  "month": 5,
+                  "year": 2024
+                }
+              },
+              "contractType": "Full-time",
+              "linkedInUrl": "https://www.linkedin.com/search/results/all/?keywords=Project+Sustain"
+            },
+            {
+              "title": "Software Engineer Intern",
+              "companyName": "Ab Initio Software",
+              "companyLocation": "On-site",
+              "description": "• Expanded the company's internal component library by implementing 2 React\ncomponent families, improving usability of internal front-end systems\n• Collaborated with 4 internal software teams, increasing visibility of incongruent\nsoftware requirements\n• Received full-time job offer",
+              "startEndDate": {
+                "start": {
+                  "month": 5,
+                  "year": 2023
+                },
+                "end": {
+                  "month": 8,
+                  "year": 2023
+                }
+              },
+              "contractType": "Internship",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQHP19urzGRXdA/company-logo_400_400/company-logo_400_400/0/1630575798335/ab_initio_logo?e=1755734400&v=beta&t=NwEo2ikSTIV_z_3Ryc7iC38i3a9ICInSFk3SvuJfx9w",
+              "linkedInUrl": "https://www.linkedin.com/company/13841/",
+              "linkedInId": "13841"
+            },
+            {
+              "title": "Software Engineer Intern",
+              "companyName": "Ab Initio Software",
+              "companyLocation": "On-site",
+              "description": "• Built and tested a component family using React and Typescript that met\nrequirements of development teams and UX design spec\n• Derived software requirements by collaborating with 4 internal software\ndevelopment teams\n• Collaborated with UX design team to define aesthetic requirements\n• Received full-time job offer",
+              "startEndDate": {
+                "start": {
+                  "month": 5,
+                  "year": 2023
+                },
+                "end": {
+                  "month": 8,
+                  "year": 2023
+                }
+              },
+              "contractType": "Full-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQHP19urzGRXdA/company-logo_400_400/company-logo_400_400/0/1630575798335/ab_initio_logo?e=1755734400&v=beta&t=NwEo2ikSTIV_z_3Ryc7iC38i3a9ICInSFk3SvuJfx9w",
+              "linkedInUrl": "https://www.linkedin.com/company/13841/",
+              "linkedInId": "13841"
+            },
+            {
+              "title": "Lead Graduate Teaching Assistant",
+              "companyName": "Colorado State University",
+              "companyLocation": "Fort Collins, Colorado, United States · On-site",
+              "description": "Skills: Object-Oriented Programming (OOP) · Big Data · C (Programming Language) · Git · Communication · Distributed Systems",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2023
+                },
+                "end": {
+                  "month": 5,
+                  "year": 2023
+                }
+              },
+              "contractType": "Part-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            },
+            {
+              "title": "Undergraduate Teaching Assistant",
+              "companyName": "Colorado State University",
+              "description": "Skills: MySQL · Agile Methodologies · Java · Test Automation · Scrum · JSON · Agile Application Development · HTML · Data Structures · Databases · Web Application Development · React.js · Git · GitHub · Communication · Algorithms · Software Design · Python (Programming Language) · JavaScript",
+              "startEndDate": {
+                "start": {
+                  "month": 8,
+                  "year": 2021
+                },
+                "end": {
+                  "month": 12,
+                  "year": 2021
+                }
+              },
+              "contractType": "Part-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            },
+            {
+              "title": "Software Analyst Internship",
+              "companyName": "Encompass Technologies",
+              "companyLocation": "Fort Collins, Colorado, United States",
+              "description": "• Improved client implementations of company software\n• Tested application software, resulting in lower failure rates of deployed\napplications and higher client review scores\n• Received full-time job offer",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2021
+                },
+                "end": {
+                  "month": 5,
+                  "year": 2021
+                }
+              },
+              "contractType": "Part-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQEVJdhTxnLRZA/company-logo_400_400/company-logo_400_400/0/1683673369113/encompasstechnologies_logo?e=1755734400&v=beta&t=rV79Hq7jD8nwrBh8y32BjZ8zfbMSPmGBp9Aa5ADsUGg",
+              "linkedInUrl": "https://www.linkedin.com/company/3678326/",
+              "linkedInId": "3678326"
+            },
+            {
+              "title": "Computer Science Tutor",
+              "companyName": "Colorado State University",
+              "companyLocation": "Fort Collins, Colorado, United States",
+              "description": "Skills: Data Structures · Communication · Algorithms",
+              "startEndDate": {
+                "start": {
+                  "month": 10,
+                  "year": 2020
+                },
+                "end": {
+                  "month": 12,
+                  "year": 2020
+                }
+              },
+              "contractType": "Part-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "linkedInId": "163149"
+            }
+          ]
+        },
+        "schools": {
+          "educationsCount": 2,
+          "educationHistory": [
+            {
+              "degreeName": "Master's degree",
+              "fieldOfStudy": "Computer Science",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "schoolName": "Colorado State University",
+              "startEndDate": {
+                "start": {
+                  "month": 8,
+                  "year": 2022
+                },
+                "end": {
+                  "month": 5,
+                  "year": 2024
+                }
+              }
+            },
+            {
+              "degreeName": "Bachelor's degree",
+              "fieldOfStudy": "Computer Science",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "schoolName": "Colorado State University",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2018
+                },
+                "end": {
+                  "month": 1,
+                  "year": 2022
+                }
+              }
+            }
+          ]
+        },
+        "skills": [
+          "Jira",
+          "Perforce",
+          "RESTful WebServices",
+          "Data Science",
+          "PostgreSQL",
+          "TypeScript",
+          "Object-Oriented Programming (OOP)",
+          "Analytical Skills",
+          "Test Automation",
+          "MySQL",
+          "Communication",
+          "Django",
+          "Big Data",
+          "Node.js",
+          "React Native",
+          "Distributed Systems",
+          "Front-End Development",
+          "Cascading Style Sheets (CSS)",
+          "Git",
+          "Hadoop",
+          "C (Programming Language)",
+          "Software Testing",
+          "Full-Stack Development",
+          "Test Driven Development",
+          "Design Patterns",
+          "Docker",
+          "MapReduce",
+          "Web Application Development",
+          "Algorithms",
+          "Data Analysis",
+          "Data Structures",
+          "Agile Methodologies",
+          "Software Design",
+          "HTML",
+          "Databases",
+          "SQL",
+          "Flask",
+          "JSON",
+          "GitHub",
+          "C++"
+        ],
+        "recommendations": {
+          "recommendationsCount": 0
+        },
+        "certifications": {
+          "certificationsCount": 1,
+          "certificationHistory": [
+            {
+              "name": "Bachelor of Science",
+              "organizationName": "Colorado State University",
+              "organizationUrl": "https://www.linkedin.com/company/163149/",
+              "issuedDate": "Issued Dec 2022"
+            }
+          ]
+        },
+        "testScores": {
+          "testScoresCount": 0
+        },
+        "volunteeringExperiences": {
+          "volunteeringExperiencesCount": 0
+        },
+        "interests": {
+          "companies": [
+            {
+              "linkedinIdentifier": "1756",
+              "name": "HCLTech",
+              "url": "https://www.linkedin.com/company/hcltech/",
+              "slug": "hcltech",
+              "followerCount": 7631655
+            },
+            {
+              "linkedinIdentifier": "6580",
+              "name": "Edmunds",
+              "url": "https://www.linkedin.com/company/edmunds-com/",
+              "slug": "edmunds-com",
+              "followerCount": 41950
+            }
+          ]
+        }
+      },
+      "company": {
+        "linkedInId": "102707905",
+        "name": "Nickel5, Inc.",
+        "universalName": "nickel5inc",
+        "linkedInUrl": "https://www.linkedin.com/company/102707905",
+        "employeeCount": 7,
+        "followerCount": 287,
+        "employeeCountRange": {
+          "start": 2,
+          "end": 10
+        },
+        "websiteUrl": "https://www.nickel5.com/",
+        "description": "Nickel5 is a private capital business providing funding for disruptive seed stage network applications.",
+        "industry": "Technology, Information and Internet",
+        "headquarter": {
+          "city": "Boulder",
+          "country": "US",
+          "geographicArea": "CO"
+        },
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQF5OjkuigU9jw/company-logo_400_400/company-logo_400_400/0/1729789238533/nickel5inc_logo?e=1755734400&v=beta&t=Do_IaemXdwNYcRyfQQDzSYodUYOf03x3JuDR0JG49zQ",
+        "foundedOn": {
+          "year": 2023
+        },
+        "backgroundUrl": "https://media.licdn.com/dms/image/v2/D561BAQHua3zon0nhnw/company-background_10000/company-background_10000/0/1730124403700/nickel5inc_cover?e=1750899600&v=beta&t=LGlCGnsws0gGmyP_vLbke6zJm1IW0xmqjJdVEb8SwQ4"
+      }
+    },
+    "data_source": "scrapin"
+  },
+  "conversation": {
+    "original_text": "\nPerson A: Hi! I'm Matt, software engineer at Nickel5.\nPerson B: Nice to meet you Matt! I'm Eric Burton Martin, I do healthcare data analytics at Cognizant. I graduated from Colorado State University.\nPerson A: That's awesome! How long have you been at Cognizant?\nPerson B: About 5 months now. I love working on AI and big data projects for healthcare. What about you at Nickel5?\nPerson A: I've been there for 1 year, mainly working on improving revenue optimization algorithms. We should connect on LinkedIn!\n",
+    "analysis": {
+      "analysis": "## Person Mapping:\n- Person A: Matt\n- Person B: Eric Burton Martin\n\n## People Identified (Excluding Eric Burton Martin):\n**Matt:**\n- Job Title/Role: software engineer\n- Company/Industry: Nickel5\n- Other Details: Has been at Nickel5 for 1 year, mainly working on improving revenue optimization algorithms.\n\n## Conversation Summary:\nMatt, a software engineer at Nickel5, and Eric Burton Martin, who does healthcare data analytics at Cognizant and graduated from Colorado State University, introduce themselves. Matt asks Eric about his tenure at Cognizant, to which Eric replies 5 months and expresses enjoyment in working on AI and big data projects for healthcare. Eric then asks Matt about his work at Nickel5. Matt states he has been at Nickel5 for 1 year, focusing on revenue optimization algorithms, and suggests they connect on LinkedIn.\n\n## Key Points Discussed:\n- Introductions (names, roles, companies)\n- Tenure at current companies\n- Types of projects/work (healthcare data analytics, AI, big data, revenue optimization algorithms)\n- University attended (Colorado State University)\n- Connecting on LinkedIn\n\n## Action Items for Eric Burton Martin:\n- Connect on LinkedIn with Matt.",
+      "person_mapping": {
+        "Person A": "Matt",
+        "Person B": "Eric Burton Martin"
+      },
+      "action_items": [
+        "Connect on LinkedIn with Matt."
+      ]
+    }
+  },
+  "summary": {
+    "person_name": "Matthew Young",
+    "search_used": "Matt Software Engineer Nickel5",
+    "linkedin_found": true,
+    "linkedin_url": "https://www.linkedin.com/in/matt-young-csu",
+    "job_title": "software engineer",
+    "company": "Nickel5",
+    "person_mapping": {
+      "Person A": "Matt",
+      "Person B": "Eric Burton Martin"
+    },
+    "action_items_count": 1
+  }
+}

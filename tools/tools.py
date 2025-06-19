@@ -17,7 +17,14 @@ def get_profile_url_tavily(name: str) -> str:
         
         # Use the search query exactly as provided - don't modify it
         print(f"🔍 Tavily searching for: '{name}'")
-        results = search.run(f"{name}")
+        
+        # Add "linkedin" to the search query if not already present
+        if "linkedin" not in name.lower():
+            enhanced_query = f"{name} linkedin"
+        else:
+            enhanced_query = name
+        
+        results = search.run(f"{enhanced_query}")
         
         if not results:
             return f"No search results found for '{name}'"
@@ -25,15 +32,24 @@ def get_profile_url_tavily(name: str) -> str:
         # Handle different result formats from Tavily
         linkedin_urls = []
         
-        # Case 1: Results is a list of dictionaries
-        if isinstance(results, list):
+        # Case 1: Results is a dictionary with 'results' key
+        if isinstance(results, dict) and 'results' in results:
+            results_list = results['results']
+            for result in results_list:
+                if isinstance(result, dict):
+                    url = result.get('url', '')
+                    if 'linkedin.com/in/' in url:
+                        linkedin_urls.append(url)
+        
+        # Case 2: Results is a list of dictionaries
+        elif isinstance(results, list):
             for result in results:
                 if isinstance(result, dict):
                     url = result.get('url', '')
                     if 'linkedin.com/in/' in url:
                         linkedin_urls.append(url)
         
-        # Case 2: Results is a string containing URLs
+        # Case 3: Results is a string containing URLs
         elif isinstance(results, str):
             import re
             # Extract LinkedIn URLs from the string
@@ -47,7 +63,21 @@ def get_profile_url_tavily(name: str) -> str:
             return clean_url
         
         # If no LinkedIn URLs found, return the raw results for the agent to process
-        print(f"⚠️ No LinkedIn URLs found in results, returning raw data")
+        print(f"⚠️ No LinkedIn URLs found in structured results, checking raw content...")
+        
+        # Try to extract from content/title fields in the new format
+        if isinstance(results, dict) and 'results' in results:
+            for result in results['results']:
+                content = result.get('content', '') + ' ' + result.get('title', '')
+                if 'linkedin.com/in/' in content:
+                    import re
+                    urls = re.findall(r'https?://(?:www\.)?linkedin\.com/in/[^\s\)\]<>"\']+', content)
+                    if urls:
+                        clean_url = urls[0].rstrip('.,;)')
+                        print(f"✅ Found LinkedIn URL in content: {clean_url}")
+                        return clean_url
+        
+        print(f"❌ No LinkedIn URLs found anywhere in results")
         return str(results)
         
     except Exception as e:
