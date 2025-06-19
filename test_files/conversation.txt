@@ -1,0 +1,6 @@
+
+Person A: Hi! I'm Matt, software engineer at Nickel5.
+Person B: Nice to meet you Matt! I'm Eric Burton Martin, I do healthcare data analytics at Cognizant. I graduated from Colorado State University.
+Person A: That's awesome! How long have you been at Cognizant?
+Person B: About 5 months now. I love working on AI and big data projects for healthcare. What about you at Nickel5?
+Person A: I've been there for 1 year, mainly working on improving revenue optimization algorithms. We should connect on LinkedIn!

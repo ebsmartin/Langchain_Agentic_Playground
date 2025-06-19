@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "actual_name": "Tanner Moore",
+    "search_query": "Tanner Software Engineer 1Inch",
+    "conversation_date": "2024-06-18",
+    "analysis_timestamp": "2025-06-18T17:12:45.466017",
+    "user_identity": {
+      "name": "Eric Burton Martin",
+      "title": "Healthcare Data Analyst",
+      "company": "Cognizant",
+      "school": "Colorado State University",
+      "linkedin_url": "https://www.linkedin.com/in/ebsmartin/"
+    }
+  },
+  "linkedin_profile": {
+    "url": "https://www.linkedin.com/in/tannermoore",
+    "profile_data": {
+      "success": true,
+      "credits_left": 93,
+      "rate_limit_left": 100,
+      "person": {
+        "publicIdentifier": "tannermoore",
+        "linkedInIdentifier": "ACoAAA8sZzABEvcJMOiUJ3yjBIz-tjLE2CTpEMM",
+        "memberIdentifier": "254568240",
+        "linkedInUrl": "https://www.linkedin.com/in/tannermoore",
+        "firstName": "Tanner",
+        "lastName": "Moore",
+        "headline": "Software Engineer at 1inch Network",
+        "location": "Denver, Denver Metropolitan Area, United States of America",
+        "summary": "I am a motivated Software Engineer looking for passionate teams who focus on writing performant and tested code. I have an affinity toward companies that have a focus on agile practices and modern technology. ",
+        "openToWork": false,
+        "premium": false,
+        "showVerificationBadge": false,
+        "creationDate": {
+          "month": 5,
+          "year": 2013
+        },
+        "followerCount": 245,
+        "positions": {
+          "positionsCount": 6,
+          "positionHistory": [
+            {
+              "title": "Software Engineer",
+              "companyName": "1inch Labs",
+              "description": "",
+              "startEndDate": {
+                "start": {
+                  "month": 9,
+                  "year": 2021
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQFuCuBIdKq8Ag/company-logo_400_400/company-logo_400_400/0/1715619792063?e=1755734400&v=beta&t=a-_1Q_kp7BVDdV_auIFP3fUc7uk57Z2D_sUoyAgu6oY",
+              "linkedInUrl": "https://www.linkedin.com/company/102708931/",
+              "linkedInId": "102708931"
+            },
+            {
+              "title": "Software Engineer III",
+              "companyName": "Bitly",
+              "companyLocation": "Denver, Colorado",
+              "description": "Team: Backend Services\nBuilt and delivered a redesign of Bitly's core product (custom/shortened links) which gave existing links the ability to be updatable to a new destination. The original system had no support for this feature and the functionality had to be built from the ground up. This new system was designed to be fully backwards compatible with all features from the existing 10+ year old codebase (Elasticsearch syncing, metrics, caching, backup/failover system, etc). The release was done in waves and users experienced no downtime when it went live to the general public.",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2020
+                },
+                "end": {
+                  "month": 8,
+                  "year": 2021
+                }
+              },
+              "contractType": "Full-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQE2-v_XRnIF0Q/company-logo_400_400/company-logo_400_400/0/1721232341564/bitly_logo?e=1755734400&v=beta&t=fMYNxTiQYg53n6CgxXO7R7CZFvhoMZGZlfXRzWs4Fbs",
+              "linkedInUrl": "https://www.linkedin.com/company/552285/",
+              "linkedInId": "552285"
+            },
+            {
+              "title": "Software Engineer",
+              "companyName": "LogRhythm",
+              "companyLocation": "Boulder, Colorado",
+              "description": "Team: Case Management\nWorked on a Golang REST API that enabled security analysts to organize and share disparate information about suspicious network events.",
+              "startEndDate": {
+                "start": {
+                  "month": 2,
+                  "year": 2018
+                },
+                "end": {
+                  "month": 1,
+                  "year": 2020
+                }
+              },
+              "contractType": "Full-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQGbz9h3UAUzwA/company-logo_400_400/company-logo_400_400/0/1721211317639/exabeam_logo?e=1755734400&v=beta&t=pyfjHBJUoalvte347UXegnD-yPENSIeB9bFKzskCI2k",
+              "linkedInUrl": "https://www.linkedin.com/company/3181474/",
+              "linkedInId": "3181474"
+            },
+            {
+              "title": "Associate Software Engineer",
+              "companyName": "LogRhythm",
+              "companyLocation": "Boulder, Colorado",
+              "description": "Team: Data Indexing Systems\nWorked on a major re-design of a legacy data storage system that was not capable of scaling horizontally to meet rising customer needs. Created individual microservices that ingested a continuous stream of data and facilitated fault tolerant storage into Elasticsearch.",
+              "startEndDate": {
+                "start": {
+                  "month": 2,
+                  "year": 2015
+                },
+                "end": {
+                  "month": 1,
+                  "year": 2018
+                }
+              },
+              "contractType": "Full-time",
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQGbz9h3UAUzwA/company-logo_400_400/company-logo_400_400/0/1721211317639/exabeam_logo?e=1755734400&v=beta&t=pyfjHBJUoalvte347UXegnD-yPENSIeB9bFKzskCI2k",
+              "linkedInUrl": "https://www.linkedin.com/company/3181474/",
+              "linkedInId": "3181474"
+            },
+            {
+              "title": "Software Developer Internship",
+              "companyName": "Charles Schwab",
+              "companyLocation": "Englewood, Colorado",
+              "description": "Developed statistical visualizations and developer content standards for their implementation of Splunk, a data centralization platform that provides advanced querying of company-wide server log files.",
+              "startEndDate": {
+                "start": {
+                  "month": 6,
+                  "year": 2014
+                },
+                "end": {
+                  "month": 8,
+                  "year": 2014
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/C560BAQGFAw4THBAMbA/company-logo_400_400/company-logo_400_400/0/1675730284249/charles_schwab_logo?e=1755734400&v=beta&t=8O_GNDYTvMcJ8Mrs5p7G70WIAbHNtfp-v3enC-DHKVE",
+              "linkedInUrl": "https://www.linkedin.com/company/1855/",
+              "linkedInId": "1855"
+            },
+            {
+              "title": "Software Developer Internship",
+              "companyName": "Progressive Insurance",
+              "companyLocation": "Colorado Springs, Colorado Area",
+              "description": "Coded web applications that gathered customer info from databases that could then be altered or analyzed.",
+              "startEndDate": {
+                "start": {
+                  "month": 6,
+                  "year": 2013
+                },
+                "end": {
+                  "month": 8,
+                  "year": 2013
+                }
+              },
+              "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQEo4b-up7kSOw/company-logo_400_400/company-logo_400_400/0/1732548384895/progressive_insurance_logo?e=1755734400&v=beta&t=e6Q_QT-aEvswY62y52RZ4Jnq5fXgTzIM1S_tv0Zgk9w",
+              "linkedInUrl": "https://www.linkedin.com/company/3264/",
+              "linkedInId": "3264"
+            }
+          ]
+        },
+        "schools": {
+          "educationsCount": 1,
+          "educationHistory": [
+            {
+              "degreeName": "Bachelor's degree",
+              "fieldOfStudy": "Computer Science. Minor Mathematics",
+              "linkedInUrl": "https://www.linkedin.com/company/163149/",
+              "schoolLogo": "https://media.licdn.com/dms/image/v2/C510BAQEWD6gHUh-iVQ/company-logo_400_400/company-logo_400_400/0/1631307431558?e=1755734400&v=beta&t=eG0HkumoWWT-fSLABzVO2rWejhnuIH2Qh-riXy2H4fA",
+              "schoolName": "Colorado State University",
+              "startEndDate": {
+                "start": {
+                  "month": 1,
+                  "year": 2012
+                },
+                "end": {
+                  "month": 1,
+                  "year": 2014
+                }
+              }
+            }
+          ]
+        },
+        "skills": [
+          "Java",
+          "Go",
+          "Git",
+          "Android",
+          "Linux",
+          "Agile Methodologies",
+          "Jenkins",
+          "Github",
+          "IntelliJ IDEA",
+          "tmux"
+        ],
+        "recommendations": {
+          "recommendationsCount": 0
+        },
+        "certifications": {
+          "certificationsCount": 1,
+          "certificationHistory": [
+            {
+              "name": "Gamification",
+              "organizationName": "University of Pennsylvania",
+              "organizationUrl": "https://www.linkedin.com/company/3165/",
+              "issuedDate": "Issued Jan 2016"
+            }
+          ]
+        },
+        "testScores": {
+          "testScoresCount": 0
+        },
+        "volunteeringExperiences": {
+          "volunteeringExperiencesCount": 0
+        },
+        "interests": {
+          "companies": [
+            {
+              "linkedinIdentifier": "163149",
+              "name": "Colorado State University",
+              "url": "https://www.linkedin.com/school/colorado-state-university/",
+              "slug": "colorado-state-university",
+              "followerCount": 321308
+            },
+            {
+              "linkedinIdentifier": "552285",
+              "name": "Bitly",
+              "url": "https://www.linkedin.com/company/bitly/",
+              "slug": "bitly",
+              "followerCount": 39385
+            }
+          ]
+        }
+      },
+      "company": {
+        "linkedInId": "102708931",
+        "name": "1inch Labs",
+        "universalName": "1inch-labs",
+        "linkedInUrl": "https://www.linkedin.com/company/102708931",
+        "employeeCount": 129,
+        "followerCount": 8163,
+        "employeeCountRange": {
+          "start": 51,
+          "end": 200
+        },
+        "tagline": "Builders of Web3 products. \nThe 1inch Network is part of our API customer portfolio.",
+        "description": "Software Services Provider for People, Projects, and Companies interested in Cost-efficient, Lightning-fast access to Liquidity in Crypto.",
+        "industry": "Software Development",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQFuCuBIdKq8Ag/company-logo_400_400/company-logo_400_400/0/1715619792063?e=1755734400&v=beta&t=a-_1Q_kp7BVDdV_auIFP3fUc7uk57Z2D_sUoyAgu6oY",
+        "fundingData": {
+          "numberOfFundingRounds": 3,
+          "crunchbaseOrganizationUrl": "https://www.crunchbase.com/organization/1inch-limited?utm_source=linkedin&utm_medium=referral&utm_campaign=linkedin_companies&utm_content=profile_cta",
+          "lastFundingRound": {
+            "fundingType": "Series B",
+            "moneyRaised": {
+              "amount": "175000000",
+              "currencyCode": "USD"
+            },
+            "fundingRoundUrl": "https://www.crunchbase.com/funding_round/1inch-limited-series-b--e6326ae8?utm_source=linkedin&utm_medium=referral&utm_campaign=linkedin_companies&utm_content=last_funding",
+            "announcedOn": "2021-12-01T00:00:00.000Z",
+            "numberOfOtherInvestors": 12,
+            "investorsUrl": "https://www.crunchbase.com/funding_round/1inch-limited-series-b--e6326ae8?utm_source=linkedin&utm_medium=referral&utm_campaign=linkedin_companies&utm_content=all_investors",
+            "leadInvestors": [
+              {
+                "name": "Amber Group",
+                "url": "https://www.crunchbase.com/organization/amber-ai?utm_source=linkedin&utm_medium=referral&utm_campaign=linkedin_companies&utm_content=investor",
+                "image": "https://media.licdn.com/dms/image/sync/v2/D4E38AQEBCHma5_A2gg/crunchbase_investor_logo_100/crunchbase_investor_logo_100/0/1749185544863?e=1750899600&v=beta&t=5QyiJ306hve0e01UbfHDFhGisSu18rCvrhIWoBZuo8M"
+              }
+            ]
+          }
+        },
+        "backgroundUrl": "https://media.licdn.com/dms/image/v2/D561BAQEG5GMjZCb1Sg/company-background_10000/company-background_10000/0/1715619905636/1inch_labs_cover?e=1750899600&v=beta&t=H70Hi-VqXx16BYkeeaqku_AtQ2s51yPejmZejDxbfd4"
+      }
+    },
+    "data_source": "scrapin"
+  },
+  "conversation": {
+    "original_text": "\nPerson A: Hey, excuse me, is this seat taken? The keynote on DeFi scalability was packed!\nPerson B: Oh, hey! No, go for it. I'm Tanner, by the way. Yeah, that was a great talk.\nPerson A: I'm Eric. Nice to meet you, Tanner. So, what brings you to CryptoCon? Are you deep in the DeFi space too?\nPerson B: You could say that! I'm a Software Engineer at 1Inch. We're trying to make it easier for users to control their own data using blockchain. How about you, Jamie?\nPerson A: That's fascinating! I'm on the other side of the coin, so to speak. I'm an Associate Market Analyst at 1Inch. I spend my days tracking trends, tokenomics, and trying to predict the next big wave. So, less building, more observing.\nPerson B: Ah, a market guru! We definitely need more people like you to make sense of all this chaos. It's interesting, your analysis probably informs the kind of projects that get traction, which then impacts what developers like me build.\nPerson A: Exactly! It's all interconnected. I've been particularly interested in the intersection of NFTs and real-world asset tokenization lately. Seems like a huge potential area.\nPerson B: Totally agree. We've actually been exploring how decentralized identity could play a role in verifying ownership of tokenized assets. Makes the whole process more secure and transparent.\nPerson A: That's a great point. We should definitely connect. I'd love to hear more about your project and how DID can be applied there. Maybe we could grab a coffee tomorrow morning before the sessions start?\nPerson B: Sounds like a plan, Eric. I'm free around 8:30. Let's exchange contact info. Here's my LinkedIn QR code.\nPerson A: Perfect. Just scanned it. I'll send you a message. Looking forward to it!\n",
+    "analysis": {
+      "analysis": "## Person Mapping:\n- Person A: Eric\n- Person B: Tanner\n\n## People Identified (Excluding Eric Burton Martin):\n**Tanner:**\n- Job Title/Role: Software Engineer\n- Company/Industry: 1Inch\n- Other Details: Trying to make it easier for users to control their own data using blockchain. Explored how decentralized identity (DID) could play a role in verifying ownership of tokenized assets.\n\n## Conversation Summary:\nEric approaches Tanner, asking if a seat is taken, and they introduce themselves. They discover they both work at 1Inch, with Eric as an Associate Market Analyst and Tanner as a Software Engineer. They discuss the interconnectedness of their roles, with Eric observing market trends and Tanner building projects. Their conversation shifts to specific interests, including NFTs, real-world asset tokenization, and decentralized identity. They agree to connect further to discuss these topics, planning to meet for coffee the following morning and exchanging contact information via LinkedIn QR code.\n\n## Key Points Discussed:\n- DeFi scalability keynote\n- Job roles and companies (Software Engineer at 1Inch, Associate Market Analyst at 1Inch)\n- Making it easier for users to control their own data using blockchain\n- Tracking market trends, tokenomics, and predicting market waves\n- The interconnectedness of market analysis and development in the crypto space\n- NFTs and real-world asset tokenization\n- Decentralized Identity (DID) and its role in verifying ownership of tokenized assets\n- Plans to connect further and discuss projects\n\n## Action Items for Eric Burton Martin:\n- Grab a coffee with Tanner tomorrow morning around 8:30 before the sessions start.\n- Send Tanner a message (after scanning his LinkedIn QR code).",
+      "person_mapping": {
+        "Person A": "Eric",
+        "Person B": "Tanner"
+      },
+      "action_items": [
+        "Grab a coffee with Tanner tomorrow morning around 8:30 before the sessions start.",
+        "Send Tanner a message (after scanning his LinkedIn QR code)."
+      ]
+    }
+  },
+  "summary": {
+    "person_name": "Tanner Moore",
+    "search_used": "Tanner Software Engineer 1Inch",
+    "linkedin_found": true,
+    "linkedin_url": "https://www.linkedin.com/in/tannermoore",
+    "job_title": "Software Engineer",
+    "company": "1Inch",
+    "person_mapping": {
+      "Person A": "Eric",
+      "Person B": "Tanner"
+    },
+    "action_items_count": 2
+  }
+}
